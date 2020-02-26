@@ -1,4 +1,6 @@
 #pragma once
+#include <ostream>
+using namespace std;
 class String
 {
 private:
@@ -6,10 +8,9 @@ private:
 	int n;
 public:
 	String();
-	String(const String& s);
+	String(const String& s);//
 	String(char* s);
 	String(const char* s);
+	friend ostream& operator<< (ostream& a, const String& s);
+	friend istream& operator>> (istream& a, String& s);
 };
-
-//принимаем только строку в cpp пишем, смотрим на длину строки и передаём
-//в стр с найденой длиной строки 
