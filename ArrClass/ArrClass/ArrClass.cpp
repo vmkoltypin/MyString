@@ -9,7 +9,7 @@ int main()
 	Array<int> b;
 	b = arr;
 	arr[0] = 5;
-	arr.bublesort();
+	arr.sort();
 	//f(n) = 4;
 	cout << arr << endl;
 	cout << b << endl;

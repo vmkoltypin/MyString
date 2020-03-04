@@ -26,7 +26,15 @@ public:
 		return os;
 	}
 	void bublesort();
+	void sort() { qsort(arr, n, sizeof(T), comp); }
 	//friend istream& operator >>(istream& os, Array& a);
+	static int comp(const void* a, const void* b) {
+		T* ap = (T*)a;
+		T* bp = (T*)b;
+		if (*ap > * bp)return 1;
+		if (*ap < * bp)return -1;
+		else return 0;
+	}
 };
 
 
